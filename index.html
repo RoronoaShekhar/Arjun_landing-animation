@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wake Up Arjun</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .box {
+      opacity: 0;
+      transform: translateY(50px);
+      animation: slideUpFade 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+    }
+
+    .box:nth-child(1) { animation-delay: 0.3s; }
+    .box:nth-child(2) { animation-delay: 0.8s; }
+    .box:nth-child(3) { animation-delay: 1.3s; }
+    .box:nth-child(4) { animation-delay: 1.8s; }
+    .box:nth-child(5) { animation-delay: 2.3s; }
+
+    img {
+      max-width: 180px;
+      border-radius: 12px;
+      box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    p {
+      margin-top: 8px;
+      font-size: 1.1rem;
+      color: #ccc;
+      text-align: center;
+    }
+
+    @keyframes slideUpFade {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <img src="1.jpg" alt="1" />
+      <p>Aleec Panda</p>
+    </div>
+    <div class="box">
+      <img src="2.jpg" alt="2" />
+      <p>PW</p>
+    </div>
+    <div class="box">
+      <img src="3.jpg" alt="3" />
+      <p>Saleem Sir</p>
+    </div>
+    <div class="box">
+      <img src="4.jpg" alt="4" />
+      <p>🫡</p>
+    </div>
+    <div class="box">
+      <img src="5.jpg" alt="5" />
+      <p>Physics</p>
+    </div>
+  </div>
+
+  <script>
+    // Redirect after animation ends
+    setTimeout(() => {
+      window.location.href = "https://roronoashekhar.github.io/Arjun/";
+    }, 5000);
+  </script>
+</body>
+</html>
